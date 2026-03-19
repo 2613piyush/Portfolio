@@ -118,60 +118,28 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // ── CONTACT FORM ──
-// ── CONTACT FORM ──
-async function handleSubmit(e) {
+function handleSubmit(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
   const originalContent = btn.innerHTML;
   
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
-
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
   
-  try {
-    const response = await fetch('http://localhost:5000/send-email', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ name, email, message })
-    });
-
-    if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Server responded with error:', errorText);
-        throw new Error('Server Error');
-    }
-
-    const data = await response.json();
-
-    if (data.success) {
-      btn.innerHTML = '✅ Message Sent!';
-      btn.style.background = 'linear-gradient(135deg,#34d399,#059669)';
-      gsap.from(btn, { scale: 1.1, duration: 0.3, ease: 'elastic.out(1, 0.3)' });
-      e.target.reset();
-    } else {
-      throw new Error(data.message || 'Failed to send');
-    }
-  } catch (error) {
-    console.error('Submission Error:', error);
+  // Simulate API call
+  setTimeout(() => {
+    btn.innerHTML = '✅ Message Sent!';
+    btn.style.background = 'linear-gradient(135deg,#34d399,#059669)';
     
-    if (error.message === 'Failed to fetch') {
-        btn.innerHTML = '❌ Server Offline';
-    } else {
-        btn.innerHTML = '❌ Error sending!';
-    }
-    btn.style.background = 'linear-gradient(135deg,#ef4444,#dc2626)';
-  } finally {
+    gsap.from(btn, { scale: 1.1, duration: 0.3, ease: 'elastic.out(1, 0.3)' });
+    
     setTimeout(() => {
       btn.innerHTML = originalContent;
       btn.style.background = '';
       btn.disabled = false;
-    }, 4000);
-  }
+      e.target.reset();
+    }, 3000);
+  }, 1500);
 }
 
 // ── SMOOTH SCROLL ──
