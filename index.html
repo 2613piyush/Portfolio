@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piyush Thakur | Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Piyush Thakur – B.Tech CSE student, Data Analyst & Full-Stack Developer from LPU." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════  LOADER  ═══════════════════════ -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">PT</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════  CURSOR GLOW  ═══════════════════════ -->
+  <div id="cursor-glow"></div>
+
+  <!-- ═══════════════════════  INTERACTIVE BACKGROUND  ═══════════════════════ -->
+  <div id="blob"></div>
+  <canvas id="bgGameCanvas"></canvas>
+
+
+  <!-- ═══════════════════════  NAVBAR  ═══════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-logo">PT</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════  HERO  ═══════════════════════ -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, World!</p>
+        <h1 class="hero-name">Piyush Thakur</h1>
+        <p class="hero-title">
+          <span>Aspiring Data Analyst</span>
+        </p>
+        <p class="hero-desc">
+          Exploring the world through data by analyzing complex datasets and building intelligent solutions using data
+          science, artificial intelligence and machine learning.
+        </p>
+        <div class="hero-tags">
+          <span class="hero-tag">Python</span>
+          <span class="hero-tag">Machine Learning</span>
+          <span class="hero-tag">Excel</span>
+          <span class="hero-tag">Power BI</span>
+          <span class="hero-tag">SQL</span>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="cv.html" class="btn-secondary" target="_blank">View / Download CV 📄</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-ring">
+          <div class="profile-ring-inner">
+            <img src="profile.jpg" alt="Piyush Thakur" class="profile-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  ABOUT  ═══════════════════════ -->
+  <section id="about" class="section bg-secondary">
+    <div class="section-header">
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="container fade-up">
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am pursuing BTech in Computer Science (3rd year) at Lovely Professional University. I am interested in
+            Data Science and Machine Learning and enjoy working with data to find useful insights. I like building
+            practical projects that combine technology, creativity, and problem-solving. I am always learning new tools
+            and improving my technical skills to create solutions that are efficient and useful.
+          </p>
+          <p>
+            I am always exploring new tools and technologies to strengthen my technical skills and expand my
+            understanding of data-driven systems. My goal is to develop solutions that not only solve problems but also
+            create real value and meaningful user experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  SKILLS  ═══════════════════════ -->
+  <section id="skills">
+    <div class="section-header fade-up">
+      <p class="section-label">What I Know</p>
+      <h2 class="section-title">My <span>Skills</span></h2>
+      <div class="section-divider"></div>
+      <p class="skills-footer-text">Languages, frameworks, and tools I use to bring ideas to life.</p>
+    </div>
+    <div class="skills-categories">
+
+      <div class="skill-category fade-up">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">💻</span>
+          <span class="skill-cat-name">Languages</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">📚</span>
+          <span class="skill-cat-name">Frameworks & Libraries</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">NumPy</span>
+          <span class="skill-tag">Pandas</span>
+          <span class="skill-tag">Matplotlib</span>
+          <span class="skill-tag">Seaborn</span>
+          <span class="skill-tag">Scikit-learn</span>
+          <span class="skill-tag cyan">HTML</span>
+          <span class="skill-tag cyan">CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🛠️</span>
+          <span class="skill-cat-name">Tools & Platforms</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag green">Excel</span>
+          <span class="skill-tag green">Power BI</span>
+          <span class="skill-tag green">MySQL</span>
+          <span class="skill-tag green">Jupyter Notebook</span>
+        </div>
+      </div>
+
+      <div class="skill-category fade-up">
+        <div class="skill-cat-header">
+          <span class="skill-cat-icon">🤝</span>
+          <span class="skill-cat-name">Soft Skills</span>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Leadership</span>
+          <span class="skill-tag">Teamwork</span>
+          <span class="skill-tag">Adaptability</span>
+          <span class="skill-tag">Critical Thinking</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  PROJECTS  ═══════════════════════ -->
+  <section id="projects" class="bg-secondary">
+    <div class="section-header fade-up">
+      <p class="section-label">What I've Built</p>
+      <h2 class="section-title">Featured <span>Projects</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Project 1: Crime Analysis & Insights Dashboard -->
+      <div class="project-card fade-up">
+        <div class="project-card-image">
+          <img src="crime_analysis_dashboard.png?v=2" alt="Crime Analysis Dashboard">
+        </div>
+        <div class="project-card-top">
+          <div class="project-number">PROJECT 01</div>
+          <div class="project-card-header-flex">
+            <span class="project-icon">🚔</span>
+            <div class="project-links">
+              <a href="https://github.com/2613piyush/Power-BI-Project" target="_blank" class="project-link"
+                title="View Code on GitHub">🐙</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-date">Oct 2025 – Jan 2026</p>
+          <h3 class="project-name">Crime Analysis & Insights Dashboard</h3>
+          <div class="project-desc">
+            <ul>
+              <li>Built an interactive Crime Analysis Dashboard to analyze crime trends across different areas and time
+                periods</li>
+              <li>Created dynamic visualizations (bar, pie, line charts) to highlight area-wise crime distribution and
+                trends</li>
+            </ul>
+            <ul class="extra-points" style="display: none;">
+              <li>Implemented interactive filters (Year, Month, Victim Gender) for better data exploration and insights
+              </li>
+              <li>Enabled quick identification of crime hotspots through data-driven visualization</li>
+            </ul>
+            <button class="btn-more" onclick="togglePoints(this)">View More</button>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-pill">Power BI</span>
+            <span class="tech-pill">Data Visualization</span>
+            <span class="tech-pill">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: From Data to Insights -->
+      <div class="project-card fade-up">
+        <div class="project-card-image">
+          <img src="anime_recommendation.png" alt="Anime Recommendation Dashboard">
+        </div>
+        <div class="project-card-top">
+          <div class="project-number">PROJECT 02</div>
+          <div class="project-card-header-flex">
+            <span class="project-icon">📊</span>
+            <div class="project-links">
+              <a href="https://github.com/2613piyush/From-Data-to-Insights-Project" target="_blank" class="project-link"
+                title="View Code on GitHub">🐙</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-date">Jun 2025 – Jul 2025</p>
+          <h3 class="project-name">From Data to Insights – A Hands-On Approach to Data Science</h3>
+          <div class="project-desc">
+            <ul>
+              <li>Performed data extraction and analysis using SQL and Excel, identifying key trends</li>
+              <li>Cleaned and transformed datasets with Python, Pandas, and NumPy for accurate analysis</li>
+            </ul>
+            <ul class="extra-points" style="display: none;">
+              <li>Applied Machine Learning models to generate meaningful insights and predictions</li>
+              <li>Designed an interactive Power BI dashboard to visualize KPIs and analytical findings</li>
+              <li>Executed end-to-end workflow: SQL → Excel → Python/ML → Power BI</li>
+            </ul>
+            <button class="btn-more" onclick="togglePoints(this)">View More</button>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-pill">SQL</span>
+            <span class="tech-pill">Excel</span>
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pandas</span>
+            <span class="tech-pill">NumPy</span>
+            <span class="tech-pill">Machine Learning</span>
+            <span class="tech-pill">Power BI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Startup Advisor Chatbot -->
+      <div class="project-card fade-up">
+        <div class="project-card-image">
+          <img src="ChatGPT Image Mar 17, 2026, 03_05_01 PM.png" alt="Startup Advisor Chatbot">
+        </div>
+        <div class="project-card-top">
+          <div class="project-number">PROJECT 03</div>
+          <div class="project-card-header-flex">
+            <span class="project-icon">🤖</span>
+            <div class="project-links">
+              <a href="https://github.com/2613piyush" target="_blank" class="project-link"
+                title="View Code on GitHub">🐙</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <p class="project-date">Feb 2025 – May 2025</p>
+          <h3 class="project-name">Startup Advisor Chatbot</h3>
+          <div class="project-desc">
+            <ul>
+              <li>Developed a chatbot web app providing startup guidance, funding insights, and suggestions</li>
+              <li>Implemented a secure login system with modern chat UI, dark mode & voice-to-text</li>
+            </ul>
+            <ul class="extra-points" style="display: none;">
+              <li>Integrated the Gemini API to deliver accurate, startup-focused responses</li>
+              <li>Added chat history support for smoother user interaction and continuity</li>
+              <li>Built complete end-to-end solution using Flask with a responsive frontend</li>
+            </ul>
+            <button class="btn-more" onclick="togglePoints(this)">View More</button>
+          </div>
+        </div>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Flask</span>
+            <span class="tech-pill">Gemini API</span>
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  CERTIFICATIONS  ═══════════════════════ -->
+  <section id="certifications">
+    <div class="section-header fade-up">
+      <p class="section-label">Credentials</p>
+      <h2 class="section-title">My <span>Certifications</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card fade-up">
+        <div class="cert-card-image" onclick="openCertModal('web_a_thon_cert.png')">
+          <img src="web_a_thon_cert.png" alt="Web-A-Thon 2.0 Hackathon Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <span class="cert-icon">🏆</span>
+            <div class="cert-info">
+              <p class="cert-title">Web-A-Thon 2.0 Hackathon</p>
+              <p class="cert-issuer">Student Organisation ARENA, LPU</p>
+              <p class="cert-date">Feb 2026</p>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <a href="javascript:void(0)" class="cert-link" onclick="openCertModal('web_a_thon_cert.png')">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-up">
+        <div class="cert-card-image" onclick="openCertModal('cloud_computing_cert.png')">
+          <img src="cloud_computing_cert.png" alt="Cloud Computing Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <span class="cert-icon">☁️</span>
+            <div class="cert-info">
+              <p class="cert-title">Cloud Computing</p>
+              <p class="cert-issuer">NPTEL</p>
+              <p class="cert-date">Nov 2025</p>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <a href="javascript:void(0)" class="cert-link" onclick="openCertModal('cloud_computing_cert.png')">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-up">
+        <div class="cert-card-image" onclick="openCertModal('data_insights_cert.png')">
+          <img src="data_insights_cert.png" alt="From Data to Insights Certificate">
+        </div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <span class="cert-icon">📊</span>
+            <div class="cert-info">
+              <p class="cert-title">From Data to Insights</p>
+              <p class="cert-issuer">Lovely Professional University</p>
+              <p class="cert-date">Jul 2025</p>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <a href="javascript:void(0)" class="cert-link" onclick="openCertModal('data_insights_cert.png')">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-up">
+        <div class="cert-card-image" onclick="openCertModal('fcc_web_design.png')">
+          <img src="fcc_web_design.png" alt="Responsive Web Design">
+        </div>
+        <div class="cert-body">
+          <div class="cert-header">
+            <span class="cert-icon">🔥</span>
+            <div class="cert-info">
+              <p class="cert-title">Responsive Web Design</p>
+              <p class="cert-issuer">freeCodeCamp</p>
+              <p class="cert-date">OCT 2023</p>
+            </div>
+          </div>
+          <div class="cert-footer">
+            <a href="https://freecodecamp.org/certification/fcc612bb74d-faa7-4e5e-b94a-30dc59df9a9e/responsive-web-design" target="_blank" class="cert-link">View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  ACHIEVEMENTS  ═══════════════════════ -->
+  <section id="achievements" class="bg-secondary">
+    <div class="section-header fade-up">
+      <p class="section-label">Extracurricular</p>
+      <h2 class="section-title">Extracurricular <span>Activities</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="achievements-grid">
+
+      <div class="achievement-card fade-up">
+        <div class="achievement-icon">🚀</div>
+        <p class="achievement-date">Dec 2025</p>
+        <h3 class="achievement-title">Co-Head &amp; Active Member, E-Cell, LPU</h3>
+        <p class="achievement-desc">
+          Organized and managed innovation-focused events and activities, driving entrepreneurship
+          initiatives and coordinating event execution within the university community.
+        </p>
+      </div>
+
+      <div class="achievement-card fade-up">
+        <div class="achievement-icon">💡</div>
+        <p class="achievement-date">Nov 2025</p>
+        <h3 class="achievement-title">Participant, LPU Innovate Now</h3>
+        <p class="achievement-desc">
+          Selected to pitch an innovative solution addressing real-world campus challenges; analyzed
+          assigned problem areas, selected a key issue, and presented a practical idea proposal.
+        </p>
+      </div>
+
+      <div class="achievement-card fade-up">
+        <div class="achievement-icon">🏛️</div>
+        <p class="achievement-date">Mar 2025</p>
+        <h3 class="achievement-title">Coordinator, 8th Chatr Sansad India Conclave – LPU</h3>
+        <p class="achievement-desc">
+          Coordinated event sessions, guest coordination, and event execution for a national-level conclave,
+          demonstrating strong organizational and leadership skills.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  GITHUB ACTIVITY  ═══════════════════════ -->
+  <section id="github-activity">
+    <div class="section-header fade-up">
+      <p class="section-label soft-purple-mono" style="font-family: 'Courier New', Courier, monospace; color: #ffcc00; letter-spacing: 3px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">GITHUB</p>
+      <h2 class="section-title">Code <span>Activity</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Live statistics from GitHub profile</p>
+    </div>
+
+    <div class="github-stats-container fade-up">
+      <div class="github-stats-grid">
+        <div class="github-stat-card">
+          <div class="stat-value" id="github-repos">--</div>
+          <div class="stat-label">Repositories</div>
+        </div>
+        <div class="github-stat-card">
+          <div class="stat-value" id="github-followers">--</div>
+          <div class="stat-label">Followers</div>
+        </div>
+        <div class="github-stat-card">
+          <div class="stat-value" id="github-stars">--</div>
+          <div class="stat-label">Stars</div>
+        </div>
+        <div class="github-stat-card">
+          <div class="stat-value" id="github-language">--</div>
+          <div class="stat-label">Top Language</div>
+        </div>
+      </div>
+
+      <div class="github-graph-container">
+        <img src="https://ghchart.rshah.org/4f46e5/2613piyush" alt="2613piyush GitHub contribution graph" />
+      </div>
+
+      <div class="github-footer">
+        <a href="https://github.com/2613piyush" target="_blank" class="github-btn">
+          View GitHub Profile <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  EDUCATION  ═══════════════════════ -->
+  <section id="education">
+    <div class="section-header fade-up">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">My <span>Education</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="education-list">
+      <div class="education-timeline-line"></div>
+
+      <div class="edu-card fade-up">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-info">
+          <p class="edu-institution">Lovely Professional University — Punjab, India</p>
+          <p class="edu-degree">Bachelor of Technology – Computer Science &amp; Engineering</p>
+          <p class="edu-meta">CGPA: <strong style="color:var(--accent2)">7.26</strong> &nbsp;|&nbsp; Aug 2023 – Present
+          </p>
+        </div>
+      </div>
+
+      <div class="edu-card fade-up">
+        <div class="edu-icon">📗</div>
+        <div class="edu-info">
+          <p class="edu-institution">RK International School — Sarkaghat, Himachal Pradesh</p>
+          <p class="edu-degree">Intermediate (Class XII)</p>
+          <p class="edu-meta">Percentage: <strong style="color:var(--accent2)">69.8%</strong> &nbsp;|&nbsp; Jun 2021 –
+            Apr 2022</p>
+        </div>
+      </div>
+
+      <div class="edu-card fade-up">
+        <div class="edu-icon">📘</div>
+        <div class="edu-info">
+          <p class="edu-institution">RK International School — Sarkaghat, Himachal Pradesh</p>
+          <p class="edu-degree">Matriculation (Class X)</p>
+          <p class="edu-meta">Percentage: <strong style="color:var(--accent2)">61%</strong> &nbsp;|&nbsp; Apr 2019 – Mar
+            2020</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════  CONTACT  ═══════════════════════ -->
+
+  <section id="contact" class="bg-secondary">
+    <div class="section-header fade-up">
+      <p class="section-label">Let's Talk</p>
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info fade-up">
+        <h3>Let's build something great together!</h3>
+        <p>
+          Whether you have an opportunity, a project idea, or just want to say hi — my inbox is always open.
+          I'll get back to you as soon as I can.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:piyushthakur2613@gmail.com" class="contact-link">
+            <span class="contact-link-icon">📧</span>
+            piyushthakur2613@gmail.com
+          </a>
+
+          <a href="tel:+919418580944" class="contact-link">
+            <span class="contact-link-icon">📱</span>
+            +91 94185 80944
+          </a>
+
+          <a href="https://www.linkedin.com/in/piyush-thakur-033922297/" target="_blank" class="contact-link">
+            <span class="contact-link-icon">💼</span>
+            linkedin.com/in/piyush-thakur
+          </a>
+          <a href="https://github.com/2613piyush" target="_blank" class="contact-link">
+            <span class="contact-link-icon">🐙</span>
+            github.com/2613piyush
+          </a>
+        </div>
+      </div>
+      <form class="contact-form fade-up" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="John Doe" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="I'd love to collaborate on…" required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="border:none;width:100%;justify-content:center;">Send Message
+          🚀</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════  FOOTER  ═══════════════════════ -->
+  <footer>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/piyush-thakur-033922297/" target="_blank" title="LinkedIn"><i
+          class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/2613piyush" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:piyushthakur2613@gmail.com" title="Gmail"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>Designed &amp; Built with ❤️ by <span>Piyush Thakur</span> &nbsp;·&nbsp; 2026</p>
+  </footer>
+
+  <!-- ═══════════════════════  CERTIFICATE MODAL  ═══════════════════════ -->
+  <div id="certModal" class="modal">
+    <span class="close" onclick="closeCertModal()">&times;</span>
+    <img class="modal-content" id="certImage">
+    <div id="caption"></div>
+  </div>
+
+  <!-- ═══════════════════════  AI CHATBOT  ═══════════════════════ -->
+  <div id="chatbot-container">
+    <div id="chatbot-button" class="fade-up">
+      <div class="chatbot-tooltip">Chat with Piyush's AI</div>
+      <div class="chatbot-icon-wrapper">
+        <i class="fas fa-robot chatbot-icon"></i>
+        <div class="chatbot-notification">1</div>
+      </div>
+    </div>
+
+    <div id="chatbot-window" class="hidden">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar">
+            <span class="avatar-logo">PV</span>
+          </div>
+          <div class="chatbot-status-container">
+            <span class="chatbot-name">Piyush's AI Assistant</span>
+            <span class="chatbot-status"><span class="status-dot"></span> Online</span>
+          </div>
+        </div>
+        <button id="close-chatbot" class="chatbot-close-btn">&times;</button>
+      </div>
+
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="chatbot-msg bot">
+          👋 Hi! I'm Piyush's AI assistant. Ask me anything about his skills, projects, or experience!
+        </div>
+      </div>
+
+      <div class="chatbot-quick-actions">
+        <button class="quick-action-btn">Who is Piyush?</button>
+        <button class="quick-action-btn">Projects built?</button>
+        <button class="quick-action-btn">Available to hire?</button>
+      </div>
+
+      <div class="chatbot-input-container">
+        <input type="text" id="chatbot-input" placeholder="Ask something..." autocomplete="off">
+        <button id="send-chatbot-msg" class="chatbot-send-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
