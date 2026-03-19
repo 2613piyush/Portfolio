@@ -134,6 +134,14 @@ nav.scrolled { padding: .7rem 5%; box-shadow: 0 4px 30px rgba(108,99,255,.15); }
   cursor: pointer; transition: all .3s; font-size: 1.1rem; padding-bottom: 2px;
 }
 .theme-toggle:hover { background: rgba(14,165,233,.2); transform: scale(1.05); }
+.nav-resume-btn {
+  background: rgba(14,165,233,.1); border: 1px solid rgba(14,165,233,.2);
+  color: var(--text-primary); border-radius: 50%; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all .3s; font-size: 1.1rem;
+  text-decoration: none;
+}
+.nav-resume-btn:hover { background: rgba(14,165,233,.2); transform: scale(1.05); color: var(--accent2); }
 
 /* ── HERO ── */
 #home {
@@ -598,11 +606,12 @@ footer span { color: var(--accent2); }
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 12px;
+  max-width: 95%;
+  max-height: 95vh;
+  border-radius: 8px;
   box-shadow: 0 0 50px var(--glow);
   border: 1px solid var(--border);
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .modal-content, #caption {

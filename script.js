@@ -734,9 +734,18 @@ eduCards.forEach((card, i) => {
 function openCertModal(imgSrc) {
   const modal = document.getElementById("certModal");
   const modalImg = document.getElementById("certImage");
+  const downloadDiv = document.getElementById("modal-download");
+  
   modal.style.display = "block";
   modalImg.src = imgSrc;
   document.body.style.overflow = "hidden";
+  
+  // Add download link if it's the resume
+  if (imgSrc === 'resume.png') {
+    downloadDiv.innerHTML = `<a href="${imgSrc}" download="Piyush_Thakur_CV.png" class="btn-secondary" style="margin: 10px auto; width: fit-content; display: block;">Download Full Image 📥</a>`;
+  } else {
+    downloadDiv.innerHTML = '';
+  }
   
   gsap.fromTo('.modal-content', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: 'back.out(1.7)' });
 }

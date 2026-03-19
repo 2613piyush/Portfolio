@@ -51,6 +51,9 @@
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
+      <a href="javascript:void(0)" class="nav-resume-btn" onclick="openCertModal('resume.png')" title="View Resume">
+        <i class="fas fa-file-invoice"></i>
+      </a>
       <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <span></span><span></span><span></span>
       </div>
@@ -81,7 +84,7 @@
         </div>
         <div class="hero-buttons">
           <a href="#projects" class="btn-primary">View Projects</a>
-          <a href="resume.png" class="btn-secondary" target="_blank">View / Download CV 📄</a>
+          <a href="Piyush_Thakur_CV.doc" class="btn-secondary" target="_blank">View / Download CV 📄</a>
           <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
       </div>
@@ -634,6 +637,7 @@
     <span class="close" onclick="closeCertModal()">&times;</span>
     <img class="modal-content" id="certImage">
     <div id="caption"></div>
+    <div id="modal-download" class="modal-download"></div>
   </div>
 
   <!-- ═══════════════════════  AI CHATBOT  ═══════════════════════ -->
